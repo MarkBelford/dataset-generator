@@ -1,0 +1,4 @@
+Hi .
+I am searching for packages that could handle Multi page GIF
+files.
+If you are looking for viewer try VPIC60

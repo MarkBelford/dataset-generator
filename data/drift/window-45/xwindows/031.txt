@@ -1,0 +1,5 @@
+Is there a way to identify an X protocol packet under DECNET Under
+TCP IP
+The information in the packets isn't necessarily
+distinctive you need to know that it is an X11 connection.
+Ethan

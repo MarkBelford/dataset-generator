@@ -1,0 +1,8 @@
+Does anyone out there know how to change the maximum request size for
+a server
+It is ordinarily set to the highest value the underlying OS can
+Yes, and you don't want to change this value if you're running Image type
+applications.
+Steve
+o o ,
+Just say NO to VMS

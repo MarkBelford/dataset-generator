@@ -1,0 +1,33 @@
+I posted about this a while ago but without code excerpts noone was
+able to help me.
+The problem is that main win.win is doing fine, but when I create
+detail win.win, it does not receive it's initial expose events until
+main win.win receives an event. Here are the relevent calls:
+main win.win XCreateSimpleWindow mydisplay, DefaultRootWindow mydisplay ,
+myhint.x, myhint.y, myhint.width, myhint.height,
+main win.line thick, fg, bg
+XSetStandardProperties mydisplay, main win.win, main win.text,
+main win.text, None, argv, argc, myhint
+main win.gc XCreateGC mydisplay, main win.win, 0, 0
+XMapRaised mydisplay, detail win.win
+XMapSubwindows mydisplay, main win.win
+The event mask for main win is:
+PPosition PSize StructureNotifyMask ExposureMask KeyPressMask
+EnterWindowMask LeaveWindowMask
+The flags are
+PPosition PSize
+I then create detail win.win with the following calls hints has new values :
+detail win.win XCreateSimpleWindow mydisplay, DefaultRootWindow mydisplay ,
+myhint.x, myhint.y, myhint.width, myhint.height,
+detail win.line thick, fg, bg
+XSetStandardProperties mydisplay, main win.win, detail win.text,
+detail win.text, None, argv, argc, myhint
+detail win.gc XCreateGC mydisplay, detail win.win, 0, 0
+XMapRaised mydisplay, detail win.win
+Event Mask and flags are identical to main win's flags and event mask.
+If anybody has any idea why the initial expose events of detail win.win
+are not received until main win.win receives an event I'd love to hear
+from them. Other that that everything works great so there must be some
+detail I'm overseeing.
+Thanks for any tips
+Robert

@@ -1,0 +1,10 @@
+when soaking in water . Lasers are slightly sharper, but the only
+instance where I needed precise layouts was Printed Circuit Board
+Transparencies for PhotoEtching. I found a Textronix color Phaser
+Postscript Thermal Wax Transfer to work the best to make PCB
+negatives directly onto a transparency.
+Did the deskjet work at all when printing on transparencies If it
+did, what sort of resolution could it manage
+adrian
+Adrian Godwin : : :
+ObDisclaimer : I believe this rubbish . don't imagine that anyone else does.

@@ -1,0 +1,6 @@
+I'm looking for a good terminal program that will connect to
+TCP IP using windows. Some basic MS Window that is connect to
+a unix host would be great.
+Any suggestions
+Thanks.
+peter kocks

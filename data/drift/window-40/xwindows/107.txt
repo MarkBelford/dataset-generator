@@ -1,0 +1,39 @@
+Hi,
+I wonder if it is possible for a parent window to paint over the area of
+its childs. If it is not, then how could it be possible to implement a
+rubberband across multiple xwindows to select the objects that are
+displayed one in each window
+Hauke
+If you specify the rootwindow when you are creating your GC. You may
+use Xlib to draw over multiple windows.
+I have an application that does something similar for rubber banding.
+curs move XCreateFontCursor disp data, XC crosshair
+geom vals.foreground blck pixl grey dark
+geom vals.plane mask AllPlanes
+geom vals.line width 0
+geom vals.function GXxor
+geom vals.subwindow mode IncludeInferiors
+evnt mask GCForeground GCPlaneMask GCLineWidth GCFunction
+GCSubwindowMode
+geom gcon XCreateGC disp data, root iden, evnt mask, geom vals
+later I can move the rubber band or bands using the following logic
+void Tselect::move bands int delt xloc, int delt yloc
+stuff deleted .
+XDrawRectangle disp data, root iden, geom gcon,
+sele pntr rootx, sele pntr rooty,
+sele pntr xlnth, sele pntr ylnth undraw old one
+sele pntr papax delt xloc
+sele pntr papay delt yloc
+sele pntr rootx delt xloc
+sele pntr rooty delt yloc
+XDrawRectangle disp data, root iden, geom gcon,
+sele pntr rootx, sele pntr rooty,
+sele pntr xlnth, sele pntr ylnth draw new one
+more stuff deleted
+hope this helps
+Brian Dealy 301 572 8267 It not knowing where it's at
+that's important,it's knowing
+uunet dftsrv kong dealy where it's not at. B.Dylan
+Brian Dealy 301 572 8267 It not knowing where it's at
+that's important,it's knowing
+uunet dftsrv kong dealy where it's not at. B.Dylan

@@ -1,0 +1,6 @@
+Does anyone know of a program for the PC that
+will take AutoCad DXF format files and convert
+them to a raster format, like PCX, GIF, etc
+Thanks in advance.
+Ed Murashie US Mail : Beckman Instruments Inc.
+phone: 714 993 8895 Diagnostic System Group

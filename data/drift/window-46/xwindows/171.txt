@@ -1,0 +1,17 @@
+Hi,
+I have a piece of X code that compiles fine on pmax ul4, pmax mach, as
+well as sun4 mach, but whenever it compiles on sun4 411, it gives me
+undefined ld errors:
+sin
+cos
+pow
+floor
+get wmShellWidgetClass
+get applicationShellWidgetClass
+The following libraries that I linked it to are:
+lXaw lXmu lXt lXext lX11
+The makefile is generated off an imake template.
+Can anyone give me pointers as to what I'm missing out to compile on
+a sun4 411
+Thanx
+Wilson

@@ -1,0 +1,12 @@
+Sorry about the garbage code, the following is used of course:
+XSetForeground Disp, PixGC, BackgroundColor
+XFillRectangle Disp, Pixs, PixGC, 0, 0, Scr width, Scr height
+XSetForeground Disp, PixGC, ForegroundColor
+XDraw Line String Rectangle Disp, Pixs, PixGC, .
+XCopyArea Disp, Pixs, Win, PixGC, 0, 0, Win width, Win height, 0, 0
+Juergen Schietke
+Research Insitute for Discrete Mathematics
+University of Bonn
+Nassestr. 2
+5300 Bonn 1
+E Mail:

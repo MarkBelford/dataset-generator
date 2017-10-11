@@ -1,0 +1,6 @@
+Hi,
+Does anybody have the source code to the externel processes that comes with 3D
+Studio, and mabe som kind of DOC for writing the processes your self.
+Lars
+Author: , Syntax BBS, Denmark
+GoldED 2.41

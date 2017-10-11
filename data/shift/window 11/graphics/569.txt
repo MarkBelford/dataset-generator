@@ -1,0 +1,7 @@
+There is a program called Graphic Workshop you can FTP from
+wuarchive. The file is in the msdos graphics directory and
+is called grfwk61t.zip. This program should od everthing
+you need.
+TMC
+THANKS It did work, and it is just what I needed thanks.
+Joshuaf

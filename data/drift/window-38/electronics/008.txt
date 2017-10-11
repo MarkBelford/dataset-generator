@@ -1,0 +1,22 @@
+CC:
+Subj: Re: I 2C bus and long haul serial also Axlo
+Return Path:
+1993 06:48:29 1300
+AA24280 Mon, 5 Apr 93 11:48:08 PDT
+inbound id AA25933 Mon, 5 Apr 93 11:48:07 PDT
+11:47:28 PDT
+Message ID:
+CC:
+content length: 693
+In article you write:
+Whats required to get onto the ACCESS bus The nice thing about the
+i2c is that most i o requires one 8 . 16 pin DIL chip, ie its cheap
+and easy. Anyone can design a bus, trouble is most buses require a
+host of interface chips and often on board intelligence.
+Bruce,
+For the latest information on Access.Bus call the Access.Bus
+Industry Group at 408 991 3517. Also, Sun will be hosting the next
+meeting of the group on April 19th, here in Mountain View. For some reason
+I am not able to post to any newsgroups today, so please feel free to pass
+this information on yourself as you see fit.
+Andrew MacRae

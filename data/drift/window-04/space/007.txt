@@ -1,0 +1,264 @@
+Archive name: space intro
+Last modified: $Date: 93 04 01 14:39:10 $
+FREQUENTLY ASKED QUESTIONS ON SCI.SPACE SCI.ASTRO
+INTRODUCTION
+This series of linked messages is periodically posted to the Usenet
+groups sci.space and sci.astro in an attempt to provide good answers to
+frequently asked questions and other reference material which is worth
+preserving. If you have corrections or answers to other frequently asked
+questions that you would like included in this posting, send email to
+Jon Leech .
+If you don't want to see the FAQ, add 'Frequently Asked Questions' to
+your KILL file for this group if you're not reading this with a newsreader
+that can kill articles by subject, you're out of luck .
+The FAQ volume is excessive right now and will hopefully be trimmed down
+by rewriting and condensing over time. The FAQ postings are available in
+the Ames SPACE archive in FAQ faq .
+Good summaries will be accepted in place of the answers given here. The
+point of this is to circulate existing information, and avoid rehashing old
+answers. Better to build on top than start again. Nothing more depressing
+than rehashing old topics for the 100th time. References are provided
+because they give more complete information than any short generalization.
+Questions fall into three basic types:
+1 Where do I find some information about space
+Try your local public library first. The net is not a good place to ask
+for general information. Ask INDIVIDUALS by email if you must. There
+are other sources, use them, too. The net is a place for open ended
+discussion.
+2 I have an idea which would improve space flight
+Hope you aren't surprised, but 9,999 out of 10,000 have usually been
+thought of before. Again, contact a direct individual source for
+evaluation. NASA fields thousands of these each day.
+3 Miscellanous queries.
+These are addressed on a case by case basis in the following series of
+FAQ postings.
+SUGGESTIONS FOR BETTER NETIQUETTE
+Read news.announce.newusers if you're on Usenet.
+Minimize cross references, Do you REALLY NEED to
+Edit Subject: lines, especially if you're taking a tangent.
+Send mail instead, avoid posting follow ups. 1 mail message worth
+100 posts .
+Internet mail readers: send requests to add drop to SPACE REQUEST
+not SPACE.
+Read all available articles before posting a follow up. Check all
+references.
+Cut down attributed articles leave only the points you're
+responding to remove signatures and headers . Summarize
+Put a return address in the body signature of your message mail
+or article , state your institution, etc. Don't assume the
+reply' function of mailers will work.
+Use absolute dates. Post in a timely way. Don't post what everyone
+will get on TV anyway.
+Some editors and window systems do character count line wrapping:
+keep lines under 80 characters for those using ASCII terminals
+use carriage returns .
+INDEX TO LINKED POSTINGS
+I've attempted to break the postings up into related areas. There isn't
+a keyword index yet the following lists the major subject areas in each
+posting. Only those containing astronomy related material are posted to
+sci.astro indicated by ' ' following the posting number .
+Contents
+1 Introduction
+Suggestions for better netiquette
+Index to linked postings
+Notes on addresses, phone numbers, etc.
+Contributors
+2 Network resources
+Overview
+Mailing lists
+Periodically updated information
+Warning about non public networks
+3 Online and some offline sources of images, data, etc.
+Introduction
+Viewing Images
+Online Archives
+NASA Ames
+NASA Astrophysics Data System
+NASA Jet Propulsion Lab Mission Information and Images
+NASA Langley Technical Reports
+NASA Spacelink
+National Space Science Data Center
+Space Telescope Science Institute Electronic Info. Service
+Starcat
+Astronomical Databases
+Astronomy Programs
+Orbital Element Sets
+SPACE Digest
+Landsat NASA Photos
+Planetary Maps
+Cometary Orbits
+4 Performing calculations and interpreting data formats
+Computing spacecraft orbits and trajectories
+Computing planetary positions
+Computing crater diameters from Earth impacting asteroids
+Map projections and spherical trignometry
+Performing N body simulations efficiently
+Interpreting the FITS image format
+Sky Unix ephemeris program
+Three dimensional star galaxy coordinates
+5 References on specific areas
+Publishers of space astronomy material
+Careers in the space industry
+DC X single stage to orbit SSTO program
+How to name a star after a person
+LLNL great exploration
+Lunar Prospector
+Lunar science and activities
+Orbiting Earth satellite histories
+Spacecraft models
+Rocket propulsion
+Spacecraft design
+Esoteric propulsion schemes solar sails, lasers, fusion.
+Spy satellites
+Space shuttle computer systems
+SETI computation signal processing
+Amateur satellies weather satellites
+Tides
+6 Constants and equations for calculations
+7 Astronomical Mnemonics
+8 Contacting NASA, ESA, and other space agencies companies
+NASA Centers Arianespace ESA NASDA Soyuzkarta Space
+Camp Space Commerce Corporation Spacehab SPOT Image
+Other commercial space businesses
+9 Space shuttle answers, launch schedules, TV coverage
+Shuttle launchings and landings schedules and how to see them
+Why does the shuttle roll just after liftoff
+How to receive the NASA TV channel, NASA SELECT
+Amateur radio frequencies for shuttle missions
+Solid Rocket Booster fuel composition
+10 Planetary probes Historical Missions
+US planetary missions
+Mariner Venus, Mars, Mercury flybys and orbiters
+Pioneer Moon, Sun, Venus, Jupiter, and Saturn flybys and orbiters
+Ranger Lunar lander and impact missions
+Lunar Orbiter Lunar surface photography
+Surveyor Lunar soft landers
+Viking Mars orbiters and landers
+Voyager Outer planet flybys
+Soviet planetary missions
+Soviet Lunar probes
+Soviet Venus probes
+Soviet Mars probes
+Japanese planetary missions
+Planetary mission references
+11 Upcoming planetary probes missions and schedules
+Cassini
+Galileo
+Magellan
+Mars Observer
+TOPEX Poseidon
+Ulysses
+Other space science missions
+Proposed missions
+12 Controversial questions
+What happened to the Saturn V plans
+Why data from space missions isn't immediately available
+Risks of nuclear RTG power sources for space probes
+Impact of the space shuttle on the ozone layer
+How long can a human live unprotected in space
+How the Challenger astronauts died
+Using the shuttle beyond Low Earth Orbit
+The Face on Mars
+13 Space activist interest research groups and space publications
+Groups
+Publications
+Undocumented Groups
+14 How to become an astronaut
+15 Orbital and Planetary Launch Services
+NOTES ON ADDRESSES, PHONE NUMBERS, ETC.
+Unless otherwise specified, telephone numbers, addresses, and so on are
+for the United States of America. Non US readers should remember to add
+the country code for telephone calls, etc.
+CREDITS
+Eugene Miya started a series of linked FAQ postings some years ago which
+inspired and was largely absorbed into this set.
+Peter Yee and Ron Baalke have and continue to spend a lot of their own
+time setting up the SPACE archives at NASA Ames and forwarding official
+NASA announcements.
+Many other people have contributed material to this list in the form of
+old postings to sci.space and sci.astro which I've edited. Please let me
+know if corrections need to be made. Contributors I've managed to keep
+track of are:
+Francis Reddy map projections
+Steven Fisk publication refs.
+Richard Akerman crater diameters
+Lisa Weigel SEDS info
+Srinivas Bettadpur tides
+Alan Wm Paeth map projections
+Allen W. Sherzer Great Exploration
+Ron Baalke planetary probe schedules
+Timothy Banks map projections,
+variable star analysis archive
+Jochen Bern German mnemonic translation
+Bernie Rosen Space Camp
+Barry Schlesinger FITS format
+Craig E. Ward space group contact info
+Tom Chapin planetary positions
+D. Alan Cunningham NASA Spacelink
+Cliff Yamamoto orbital elements
+Anthony Datri PDS VICAR viewing software
+Dave Rickel orbit formulae
+Phil Fraering propulsion
+Dani Eder Saturn V plans, SRBs
+Eugene N. Miya introduction,
+NASA contact info, started FAQ postings
+Patrick M. French space group contact info
+Gary Morris amateur radio info
+Terry Gaetz N body calculations,
+orbital dynamics
+Steve Grandi planetary positions
+greer%utd201.dnet% Dale M. Greer constants
+Henry Spencer survival in vacuum,
+astronaut how to, Challenger disaster, publication refs, DC X
+William Higgins RTGs, publishers,
+shuttle landings, spysats, propulsion, Face on Mars
+Hal Mueller map projections,
+orbital dynamics
+Josh Hopkins launch services
+Jim Bowery propulsion, launch services
+James N. Head atmospheric scale heights
+Jim Scotti planetary positions
+Kieran A. Carroll refs for spacecraft design
+Kenneth Ng RTGs
+Ken Jenks shuttle roll manuever
+Larry Klaes planetary probe history
+Jon Leech crater diameters
+Lou Adornato orbital dynamics
+Maury Markowitz propulsion
+Erik Max Francis equations
+N body calculations
+Marc Wayne Mcconley space careers
+Mark Brader Mariner 1 info.
+Mark Maimone SPACE Digest
+Dr. Nick Watkins models, spysats
+Olivier R. Hainaut publishers, STARCAT
+Graham O'Neil Lunar Prospector
+Kenneth W Durham cometary orbits, IAU
+Paul Blase propulsion
+Peter Scott RTGs
+Paul W. Schleck AMSAT, ARRL contact info
+Rodney Brown propulsion refs
+Ran Atkinson FTPable astro. programs
+R. Michael Jungclas models
+Curt Roelle German mnemonic translation
+David Seal Cassini mission schedule
+Mary Shafer photos, shuttle landings
+Willie Smith photos
+Stephen Dixon shuttle audio frequencies
+Ray Sterner planetary positions
+Phil Stooke planetary maps
+Ted Anderson propulsion
+Terry Hancock NASA center info
+Bill Thorson FITS info
+tm2b andrew.cmu.edu Todd L. Masco SPACE Digest
+Tom Horsley refs for algorithms
+Veikko Makela orbital element sets
+Wales Larrison groups publications
+Wayne Hayes constants
+Matthew P Wiener Voyager history
+Yoshiro Yamada ISAS NASDA missions
+Peter Yee AMES archive server,
+propulsion
+In Net memoriam:
+Ted Flinn
+NEXT: FAQ 2 15 Network Resources

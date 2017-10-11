@@ -1,0 +1,13 @@
+An earlier article in this newsgroup made reference to
+WinQVT Net version 3.4. Realy Where I tried archie
+with no luck. It's probably just a typo.
+Not a typo. It was uploaded to ftp.cica.indiana.edu a couple days back.
+But I sure would like to get one if it's real as I too
+have a printer problem in WinQVT.
+Version 3.4 uses standard Windows printer drivers.
+Ashok
+It's still in the pub pc win3 uploads directory as qvtnet34.zip.
+NOTE: NEW EMAIL ADDRESS
+Tom Carter
+Michigan State University
+Chemistry Department

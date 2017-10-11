@@ -1,0 +1,76 @@
+SciP Fi ction set in C Sci programming environs list by Ian Feldman
+Written by: Book Title publisher'year, pp v2.7 ISBN
+John Brunner Shockwave Rider Ray Ballantine'84 $5 0 345 32431 5
+cracking the net to free information for the common good
+Pat Cadigan Mindplayers an absolute must have Bruce Sterling
+Pat Cadigan Synners Bantam $5 virtual reality 0 553 28254 9
+Orson Scott Card Lost Boys Harper Collins'92 programmer and family
+encounters strange events in North Carolina
+Denise Danks Frame Grabber St.Martin's, hrdb GBP 17 0 312 08786 1
+computer illiterate journalix tracks down murderer via BBS
+Toni Dwiggins Interrupt a techno mystery set in Silicon Valley
+Michael Frayn The Tin Men Fontana, inspired lunacy but out of print
+David Gerrold When HARLIE was One Release 2.0 Bantam'88 0 553 26465 6
+William Gibson Count Zero computers as gods, part of a trilogy
+William Gibson Mona Lisa Overdrive virtual reality 0 553 28174 7
+William Gibson Burning Chrome cyberpunk short stories 0 441 08934 8
+William Gibson Neuromancer industrial espionage 0 441 56959 5
+author guilty of inventing the cyberpunk genre
+James Hogan The Genesis Machine Del Ray'87 $3 0 345 34756 0
+James Hogan Thrice Upon A Time time travel for information
+James Hogan The Two Faces of Tomorrow Del Ray'79 0 345 27517 9
+ultimate test of AI OS by letting it run a spacelab amok
+Stanislaw Lem His Master's Voice failed attempt to decode ET message
+Tom Maddox HALO remarkable SF of robots artificial intelligence
+George RR Martin Nightflyers Tor Books'87 0 8125 4564 8
+R A MacAvoy Tea with the Black Dragon mystery around a computer
+fraud situation computing bits ring true.
+Vonda N McIntyre Steelcollar Worker in Analog Nov'92 blue collar VR
+Marge Piercy Body of Glass Penguin'92, 584pp data piracy review
+finger books Body of Glass%danny orthanc.cs.su.oz.au
+David Pogue Hard Drive Diamond'93 $5, 304pp 1 55773 884 X
+programmer dies in accident, leaves no documentation
+behind software firms fight for market share with virii
+right out of the pages of MacWorld Steve Brock
+Richard Powers The Gold Bug Variations Morrow '91, famous molecular
+scientist ponders on the why of love, life in EDP dept.
+Paul Preuss Human Error nanotech computer infects brain damaged kid
+Thomas J Ryan The Adolescence of P1 ACE'79 0 671 55970 2
+runaway AI experiment takes over mainframes, wrecks havoc
+Bruce Sterling The Difference Engine with W Gibson Bantam'91 finger
+books The Difference Engine%danny orthanc.cs.su.oz.au
+Cliff Stoll The Cuckoo's Egg non fiction but reads like one review
+FTP garbo.uwasa.fi mac tidbits 1991 tb048 18 Mar 91.etx
+Tom T Thomas ME smart computers
+Vernor Vinge Across Realtime Baen Books several titles
+Vernor Vinge Tatja Grimm's World Baen Books soon available
+Vernor Vinge The Witling Baen Books as Millennium
+Vernor Vinge Threats and Other Promises Baen Books Books in UK
+Vernor Vinge True Names Other Dangers Baen Books'87 0 671 65363 6
+Vernor Vinge A Fire Upon The Deep Tor Books, 640p, $6 0 8125 1528 5
+essentially about the future of the Internet
+John Varley Press Enter Short story, gruesome, but good
+Ed Yourdon Silent Witness Computer crime caper story gumshoe
+has to explain intricacies of computer OS to girlfriend
+Herbert W Franke Das Zentrum der Milchstrasse the center of the galaxy
+Herbert W Franke Letzte Programmierer 'the last programmer'
+I do NOT mean Frank Herbert
+Emil Zopfi Computer Fuer 1001 Nacht Limmat Verlag, Switzerland
+Emil Zopfi Jede Minute Kostet 33 Franken last 4 in German last 2
+set in the commercial computing world of the early 70's
+current version of this list via finger scip fi%danny orthanc.cs.su.oz.au'
+compiled 930424 % mail s additions comments updates
+Statistical breakdown
+SciP Fiction
+nominations title author books nominated
+5 The Adolescence of P 1 Ryan Vinge 10 6 titles
+5 Neuromancer Gibson Gibson 10 5 titles
+4 True Names and Other Dangers Vinge Ryan 5 The Adolescence.
+4 Shockwave Rider Brunner Brunner 4 Shockwave Rider
+4 When H.A.R.L.I.E was One Gerrold Gerrold 4 When H.A.R.L.I.E.
+4 A Fire Upon The Deep Vinge Hogan 3 3 titles
+2 Threats and Other Promises Vinge Lem 3 Fiasco HMV Solar.
+total nominations: 85 authors: 27 female: 5 6 sent in by: 42 readers
+Contributions by unsorted FIFO :
+MUCHO thanks to all
+Ian The Other internet Worm tm Feldman

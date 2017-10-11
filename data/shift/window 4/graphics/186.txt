@@ -1,0 +1,11 @@
+In ,
+Does anybody know if there are any good 2d graphics packages
+available for IBM RS 6000 AIX I'm looking for something
+like DEC's GKS or Hewlett Packards Starbase, both of which
+have reasonably good support for different output devices
+like plotters, terminals, X etc.
+Try graPHIGS from IBM. It is an excellent package :
+Doug
+Doug Egan It's not what you got
+Lockheed Engineering and Sciences Co. It's what you give.
+Houston, TX Tesla

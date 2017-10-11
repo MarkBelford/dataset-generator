@@ -1,0 +1,103 @@
+This program doesn't detect edges with compass operators and a laplacian
+operator. It should output 2 raw grey scale images with edges. The output
+doesn't look like edges at all.
+In novicee terms, how do I correct the errors Any improvements are welcome.
+I'll even accept your corrected code.
+If I convolve the INPUT.IMAGE with a digital gaussian 7 by 7 to remove
+noise, will I get an improvement with the laplacian.
+2 types of edge detection
+include stdio.h
+include math.h
+define IMAGEWIDTH 300
+define IMAGEHEIGHT 300
+unsigned char Input Image IMAGEHEIGHT IMAGEWIDTH
+unsigned char Angles Wanted IMAGEHEIGHT IMAGEWIDTH
+unsigned char Magnitude Image IMAGEHEIGHT IMAGEWIDTH
+int Laplace Op1 3 3 0, 1, 0, 1,4, 1, 0, 1, 0
+int Compass Op1 3 3 1, 1, 1, 0,0, 0, 1, 1, 1
+int Compass Op2 3 3 1, 1, 0, 1,0, 1, 0, 1, 1
+int Compass Op3 3 3 1, 0, 1, 1,0, 1, 1, 0, 1
+int Compass Op4 3 3 0, 1, 1, 1,0, 1, 1, 1, 0
+int Compass Op5 3 3 1, 1, 1, 0,0, 0, 1, 1, 1
+int Compass Op6 3 3 1, 1, 0, 1,0, 1, 0, 1, 1
+int Compass Op7 3 3 1, 0, 1, 1,0, 1, 1, 0, 1
+int Compass Op8 3 3 0, 1, 1, 1,0, 1, 1, 1, 0
+void Compass row,col
+int row,col
+int value
+int op rows, op cols
+int Compass1,Compass2,Compass3,Compass4
+int Compass5,Compass6,Compass7,Compass8
+Compass1 Compass2 Compass3 Compass4 0
+Compass5 Compass6 Compass7 Compass8 0
+for op rows 1 op rows 2 op rows
+for op cols 1 op cols 2 op cols
+if row op rows 0 col op cols 0
+Compass1 int Input Image row op rows col op cols
+Compass Op1 op rows 1 op cols 1
+Compass2 int Input Image row op rows col op cols
+Compass Op2 op rows 1 op cols 1
+Compass3 int Input Image row op rows col op cols
+Compass Op3 op rows 1 op cols 1
+Compass4 int Input Image row op rows col op cols
+Compass Op4 op rows 1 op cols 1
+Compass5 int Input Image row op rows col op cols
+Compass Op5 op rows 1 op cols 1
+Compass6 int Input Image row op rows col op cols
+Compass Op6 op rows 1 op cols 1
+Compass7 int Input Image row op rows col op cols
+Compass Op7 op rows 1 op cols 1
+Compass8 int Input Image row op rows col op cols
+Compass Op8 op rows 1 op cols 1
+if Compass1 Compass2
+value Compass2
+else
+value Compass1
+if value Compass3
+value Compass3
+if value Compass4
+value Compass4
+if value Compass5
+value Compass5
+if value Compass6
+value Compass6
+if value Compass7
+value Compass7
+if value Compass8
+value Compass8
+Magnitude Image row col char value
+void Laplace1 row,col
+int row,col
+int op rows, op cols
+Magnitude Image row col 0
+for op rows 1 op rows 2 op rows
+for op cols 1 op cols 2 op cols
+if row op rows 0 col op cols 0
+Magnitude Image row col
+char int Magnitude Image row col
+int Input Image row op rows col op cols
+Laplace Op1 op rows 1 op cols 1
+main
+FILE Original Image fp
+FILE Laplace1 mag fp, Laplace2 mag fp, Laplace3 mag fp
+FILE Compass mag fp
+int row, col, Algo Count
+Original Image fp fopen INPUT.IMAGE , rb
+Laplace1 mag fp fopen Laplace1 Magnitude , wb
+Compass mag fp fopen Compass Magnitude , wb
+fread unsigned char Input Image,sizeof unsigned char ,IMAGEHEIGHT IMAGEWIDTH,Original Image fp
+for Algo Count 0 Algo Count 2 Algo Count
+for row 0 row IMAGEHEIGHT row
+for col 0 col IMAGEWIDTH col
+if Algo Count
+Laplace1 row,col
+else
+Compass row,col
+if Algo Count
+fwrite Magnitude Image,sizeof char ,IMAGEHEIGHT IMAGEWIDTH,Laplace1 mag fp
+else
+fwrite Magnitude Image,sizeof char ,IMAGEHEIGHT IMAGEWIDTH,Compass mag fp
+For a lot of .au music: ftp sounds.sdsu.edu
+then cat file.au dev audio
+UB library catalog:telnet bison.acsu.buffalo.edu
+14261 When in doubt ask: xarchie, xgopher, or xwais.

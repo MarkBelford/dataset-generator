@@ -1,0 +1,8 @@
+Hi, I'm just getting into PoVRay and I was wondering if there is a graphic
+package that outputs .POV files. Any help would be appreciated.
+Thanks.
+Later'ish
+Craig
+I didn't do it, nobody saw me do it,
+you can't prove anything.
+ccc c

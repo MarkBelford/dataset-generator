@@ -1,0 +1,18 @@
+I was wondering, what copy protection techniques are avaliable, and how
+effective are they Has anyone have any experience in this area
+With highest regards,
+Babak Sehari.
+One of the easiest, and really very used ways of copyprotection, is to mark
+a specific sector on the installation disk bad. This is very easy to get
+around, though, if you have any knowledge of hw hacking, but most 'normal'
+users yes those lowly key punchers don't. Whatever you do, please do
+not use a hardware key. These were very popular a few years ago, and they
+STINK
+MAIL mail: SNAIL mail: Gunnar Horrigmo
+Oskleiva 17
+N 1772 Norway
+first glance, but if you read between the lines, you will be
+surprised to discover the annals of Burt Bacharach, world peace,
+Oxford Advanced Readers Dictionary, quantum physics made easy, and an
+easy to use step by step walkthrough on how to make a time travelling
+device that actually works.

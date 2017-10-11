@@ -1,0 +1,12 @@
+Why not build a inflatable space dock.
+discussion of pros and cons deleted
+These are some of the technical difficulties which the LLNL proposal
+for an inflatable space station dealt with to varying degrees of
+success.
+Could someone give me the references to the LLNL proposal I've been meaning
+to track it down in conjuntion with something I'm working on. It's not
+directly related to space stations, but I think many of the principles will
+carry over.
+Josh Hopkins
+Find a way or make one.
+attributed to Hannibal

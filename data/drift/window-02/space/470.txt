@@ -1,0 +1,16 @@
+In article , Alan Carter writes.
+3. On April 19, a NO OP command was sent to reset the command loss timer to
+264 hours, its planned value during this mission phase.
+This activity is regularly reported in Ron's interesting posts. Could
+someone explain what the Command Loss Timer is
+The Command Loss Timer is part of the fault protection scheme of the
+spacecraft. If the Command Loss Timer ever countdowns to zero, then the
+spacecraft assumes it has lost communications with Earth and will go
+through a set of predetermined steps to try to regain contact. The
+Command Loss Timer is set to 264 hours and reset about once a week during
+the cruise phase, and is set to a lower value during an encounter phase.
+Ron Baalke
+Jet Propulsion Lab
+M S 525 3684 Telos The aweto from New Zealand
+Pasadena, CA 91109 is part caterpillar and
+part vegetable.

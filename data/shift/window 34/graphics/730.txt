@@ -1,0 +1,15 @@
+Article 31 of alt.graphics:
+Message ID:
+Does anyone know if a digitized version of the GeoSphere image is
+available via ftp For those of you who don't know, it is a composite
+photograph of the entire earth, with cloudcover removed. I just think
+it's really cool. It was created with government funds and sattelites
+as a research project, so I would assume it's in the public domain.
+This image is copyrighted. Early in another news group it was being
+used as a texture map in a planet orbiting simulation. That program
+was being freely distributed but the texture map picture for the
+earth had to be pulled because of copyright infringement issues.
+mp.
+Michael Prevost
+Sterling Software
+moffett Field Ca.

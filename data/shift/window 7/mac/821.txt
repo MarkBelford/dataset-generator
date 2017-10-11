@@ -1,0 +1,15 @@
+From article , by Unknown Class User :
+I think the subject title says it all. Anybody that relies on a SCSI dick
+for stoarage is a pain in the ass
+Saying things like that incline one to believe that you can't get it SCSI
+to work for your setup too bad . I've daisy chained 4 SCSI devices off my
+mac without a problem limit is 7 SCSI devices in the daisy chain . If it
+isn't working for you, it's really better to state the problem unless all
+you really intend to do is try to get nasty e mail, in that case perhaps you
+would be better off posting to alt.masochistic type of newsgroup .
+Joel E Callan Hey, why do you think I have the answer
+2909 N. 44th Street May you sit on the tack of success
+Milwaukee, WI 53210 and rise to the occasion
+Joel E Callan Hey, why do you think I have the answer
+2909 N. 44th Street May you sit on the tack of success
+Milwaukee, WI 53210 and rise to the occasion

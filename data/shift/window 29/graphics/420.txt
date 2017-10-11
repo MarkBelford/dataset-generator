@@ -1,0 +1,7 @@
+I am looking for Image Analysis software running in DOS or Windows. I'd like
+to be able to analyze TIFF or similar files to generate histograms of
+patterns, etc.
+Any help would be appreciated
+Fourie Joubert
+Department of Biochemistry
+University of Pretoria

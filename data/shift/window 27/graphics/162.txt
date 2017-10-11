@@ -1,0 +1,23 @@
+Boy, this will be embarassing if it is trivial or an FAQ:
+center and radius, exactly fitting those points I know how to do it
+for a circle from 3 points , but do not immediately see a
+straightforward way to do it in 3 D. I have checked some
+geometry books, Graphics Gems, and Farin, but am still at a loss
+Please have mercy on me and provide the solution
+Off the top of my head, I might try:
+Given: p 1, p 2, p 3, p 4
+Find: p c center of sphere determined by p 1, ., p 4 ,
+dist p c, p i radius
+p c is the same distance from our four points, so
+dist p c,p 1 dist p c,p 2 dist p c,p 3 dist p c,p 4
+Of course, we can square the whole thing to get rid of square roots:
+distsq p c,p 1 distsq p c,p 2 distsq p c,p 3 distsq p c,p 4
+Plug in the variables into the distance formula, simplify, and the
+x 2 c, y 2 c, and z 2 c terms cancel out, leaving you with three
+linearly independent equations and three unknowns x c, y c, z c .
+Solve using your favorite method. :
+All the best,
+John :
+Dr. John S. Eickemeyer :: The Lord God is subtle,
+Information Technology Institute :::: but malicious He is not.
+National Computer Board, Singapore ::

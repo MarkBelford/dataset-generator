@@ -1,0 +1,15 @@
+In article
+In article , Gilles Deniaud writ
+es:
+Hi,
+I'm looking for a program which is able to display 24 bits
+images. We are using a Sun Sparc equipped with Parallax
+graphics board running X11.
+xli, xloadimage or ImageMagick export.lcs.mit.edu 18.24.0.12 contrib
+xv 3.0 shareware supports 24 bit displays, and has lots of other
+improvements over earlier versions. Definitely worth checking out
+also at export
+Jean.
+Jean Liddle
+Computer Science, Illinois State University
+e mail:

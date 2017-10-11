@@ -1,0 +1,9 @@
+remove the shared memory segment.
+Terrible, but it works.
+Why is that terrible That's exactly the way our code has been doing
+it for two years now and is the way that temporary files in UNIX systems
+are managed most of the time open, unlink .
+Burkhard Neidecker Lutz
+Distributed Multimedia Group, CEC Karlsruhe EERP Portfolio Manager
+Software Motion Pictures BERKOM II Project Multimedia Base Technology
+Digital Equipment Corporation

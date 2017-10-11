@@ -1,0 +1,3 @@
+Try MaxAppleZoom a shareware init if your monitor is not driven by internal
+video.
+chen

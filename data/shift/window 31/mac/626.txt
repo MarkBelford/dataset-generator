@@ -1,0 +1,4 @@
+I ran speedometer 3.21's tests all of them on my IIsi first with the 64k
+cache enabled, then with the cache disabled. I put both runs in this
+uuencoded machine record. the numbers favor the cache, mostly for
+benchmarks with a lot of memory throughput.

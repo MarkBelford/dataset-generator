@@ -1,0 +1,33 @@
+University of Toronto
+Instructional and Research Computing
+is sponsoring a technical presentation
+on Visualization Software
+A d v a n c e d V i s u a l S y s t e m s A V S S o f t w a r e
+2:10 PM 4:00 PM
+Thursday, May 6, 1993
+Sandford Fleming Building
+Room 1105
+Advanced Visual Systems will present this technical seminar on
+AVS, the world's leading visualization software package. AVS is
+a point and click, module driven, easy to use product that
+produces full color, two or three dimensional rendered scenes for
+interactive observation. It is supported on all current Unix
+RISC platforms from Sun, SGI, IBM, H P, DG, and DEC. It also
+runs under DEC VMS.
+AVS is in its fourth year on the street and is very mature. All
+fields of science, engineering, medicine, and even business
+applications now use AVS. This seminar will focus on its many
+features in technical detail during a half hour slide
+presentation. Following a question period there will be a live
+demonstration using a Sun SPARCstation. In addition, a new AVS
+program called CAMPUS will be introduced at this meeting.
+Also discussed will be the International AVS Center, which
+provides an on line repository of over 1000 graphics modules at
+the North Carolina Supercomputer Center in Raliegh, NC. AVS has
+imbedded tools to write one's own customized modules should these
+not be available with AVS or from AVS International.
+S p e a k e r s
+The scheduled speaker for this presentation is Mr. Paul
+Ecklund of Ecklund Associates, the distributor of AVS in
+Canada.
+T h i s p r e s e n t a t i o n i s o p e n t o t h e p u b l i c

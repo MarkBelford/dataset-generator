@@ -1,0 +1,8 @@
+I am currently looking for a 3D graphics library that runs on MS
+Windows 3.1. Are there any such libraries out there other than
+Visuallib It must run on VGA and should not require any other
+add on graphics cards .
+For Visuallib, will it run with Metaware High C compiler v3.0 Any
+email contact for the author of Visuallib
+Any help would be much appreciated. Thanks.
+Chua, Teck Joo Information Technology Institute

@@ -1,0 +1,6 @@
+Subject says it all, though I should specify that I'm looking for solutions
+that DON'T require me purchasing specific chips, etc.
+In other words, is there some sort of neural network circuit I could build
+after a visit to a local R Shack
+Matthew David Moss Blessed are the pure in heart, for they
+BITNET : Matthew 5:8

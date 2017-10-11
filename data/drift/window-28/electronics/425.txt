@@ -1,0 +1,7 @@
+Does anyone know of an FTP site where I might find public
+domain software for the Motorola 68HC16 microprocessor
+I am looking for a basic interpreter compilier or a 'C'
+compiler. Thanks in advance.
+Ed Murashie
+Ed Murashie US Mail : Beckman Instruments Inc.
+phone: 714 993 8895 Diagnostic System Group

@@ -1,0 +1,10 @@
+I From: Costas Malamas
+We are using pkzip V2.04 and I am interested to hear from
+people who have used one of the many Windows programs that
+call these.
+Is there a full windows version that does not call the DOS
+PKZIP PKUNZIP commands
+Russ Sharp ph 052 27 1141 fax 052 27 2015
+There is WunArchive, the replacement of WunZip. It only extracts, but it
+ssupports pkzip 2.04. It does NOT require pkz unzip in order to work, and
+ccosts only $10 to register.

@@ -1,0 +1,14 @@
+Has anyone experienced a faint shadow at all resolutions using this
+card. Is only in Windows. I have replaced card and am waiting on
+latest drivers. Also have experienced General Protection Fault Errors
+in WSPDPSF.DRV on Winword Tools Option menu and in WINFAX setup.
+I had the exact same failure with the 24X and Word for Windows.
+A quick call to Microsoft indicated it was problem with the
+24X drivers. You need to call Diamond and get the new drivers,
+I think version 2.03 fixes the above problem, there may be later
+versions that I'm unaware of.
+Version 2.03 drivers are current.
+Steve Chesney
+Metaphase Technology Inc. 612 482 4662 voice
+4233 North Lexington Avenue 612 482 4001 fax
+Arden Hills, MN 55126

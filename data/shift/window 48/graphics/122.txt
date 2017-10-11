@@ -1,0 +1,11 @@
+On sunsite.unc.edu in pub multimedia utilities unix find
+mpeg play 2.0.tar.Z.
+I find for mono it works best as mpeg play dither threshold
+though you can use mpeg play dither mono
+Face it, this is not be the best viewing situation.
+Also someone has made a patch for mpeg play that gives two more mono
+modes mono2 and halftone .
+They are by Jan Newmarch .
+And the patch can be found on csc.canberra.edu.au 137.92.1.1 under
+pub motif mpeg2.0.mono.patch.
+Leon Dent

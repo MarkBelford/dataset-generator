@@ -1,0 +1,15 @@
+My friend recently purchased a LC III and he wants to know if there is
+such a demon called NuBus adapter for his PDS slot
+The LC family of Macs can only
+use PDS cards. They are not able to use NuBus.
+Ah, but why Can some technically hip Macslinger tell us what the
+difference is between PDS and Nubus
+Is it impossible to make a gadget that plugs into PDS and ends in a
+Nubus card cage At least, Marvin's friend has not been able to
+locate one and neither have I. What is the fundamental reason for
+this
+O ' ' , , ' ,
+zap
+Bill Higgins Fermi National Accelerator Laboratory
+Bitnet:
+SPAN Hepnet: 43011::HIGGINS

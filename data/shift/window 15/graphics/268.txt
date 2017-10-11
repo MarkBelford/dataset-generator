@@ -1,0 +1,7 @@
+Does anyone know of a good way standard PC application PD utility to
+convert tif img tga files into LaserJet III format. We would also like to
+do the same, converting to HPGL HP plotter files.
+Please email any response.
+Is this the correct group
+Thanks in advance. Michael.
+Michael Collier Programmer The Computer Unit,

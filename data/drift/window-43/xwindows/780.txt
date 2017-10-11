@@ -1,0 +1,7 @@
+Well, thanks largely to subscribers of this group, here's xrastool 1.0,
+the animation package I started just over 3 weeks ago. A number of the
+solutions provided through discussions here have been incorporated in
+the code, so have a look The full blurb has been posted to
+comp.windows.x.announce.
+This post is in two parts. To unpack the source code, extract the
+articles into file1 and file2 for example . Use a text editor to

@@ -1,0 +1,6 @@
+Do somenone know the solution to run XV any help would be apprecied.
+I would guess that it requires X, almost certainly DV X, which commonly
+uses the GO32 DJGPP setup for its programs. If you don't have DV X
+running, you can't get anything which requires interfacing with X.
+Kevin Martin
+I gotta get me another hat.

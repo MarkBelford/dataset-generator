@@ -1,0 +1,6 @@
+I am looking for a text reference that will include pinouts,
+description, and functionality for just about any IC made.
+You can find cross reference to almost any IC or discrete semiconductor in
+Philips ECG: Semiconductors Master Replacement Guide, $10. Especially
+industrial, commercial and entertainment, but not specialised or military.
+Francois

@@ -1,0 +1,955 @@
+Enclosed are the rules, guidelines and related information for the 10th
+International Obfuscated C Code Contest. This is part 2 of a 2 part
+shar file .
+Enjoy
+chongo Landon Curt Noll oo
+Larry Bassel
+bin sh
+This is part 02 of a multipart archive
+mkentry.c
+echo x extracting mkentry.c Text
+sed 's X ' 'SHAR EOF' mkentry.c
+X mkentry.c 1.24 3 1 93 02:28:49
+X Copyright c Landon Curt Noll Larry Bassel, 1993.
+X All Rights Reserved. Permission for personal, education or non profit use
+X is granted provided this this copyright and notice are included in its
+X entirety and remains unaltered. All other uses must receive prior
+X permission in writing from both Landon Curt Noll and Larry Bassel.
+X mkentry make an International Obfuscated C Code Contest entry
+X usage:
+X mkentry r remarks b build p prog.c o ioccc.entry
+X r remarks file with remarks about the entry
+X b build file containing how prog.c should be built
+X p prog.c the obfuscated program source file
+X o ioccc.entry ioccc entry output file
+X compile by:
+X cc mkentry.c o mkentry
+X Placed in the public domain by Landon Curt Noll, 1992.
+X THIS SOFTWARE IS PROVIDED AS IS'' AND WITHOUT ANY EXPRESS OR IMPLIED
+X WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+X MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+X WARNING:
+X This program attempts to implement the IOCCC rules. Every attempt
+X has been made to make sure that this program produces an entry that
+X conforms to the contest rules. In all cases, where this program
+X differs from the contest rules, the contest rules will be used. Be
+X sure to check with the contest rules before submitting an entry.
+X Send questions or comments but not entries about the contest, to:
+X . sun,pacbell,uunet,pyramid hoptoad judges
+X The rules and the guidelines may and often do change from year to
+X year. You should be sure you have the current rules and guidelines
+X prior to submitting entries. To obtain all 3 of them, send Email
+X to the address above and use the subject 'send rules'.
+X Because contest rules change from year to year, one should only use this
+X program for the year that it was intended. Be sure that the RULE YEAR
+X define below matches this current year.
+X include stdio.h
+X include ctype.h
+X include time.h
+X include sys types.h
+X include sys stat.h
+X logic
+X ifndef TRUE
+X define TRUE 1
+X endif TRUE
+X ifndef FALSE
+X define FALSE 0
+X endif FALSE
+X define EOF OK TRUE
+X define EOF NOT OK FALSE
+X global limits
+X define RULE YEAR 1993 NOTE: should match the current year
+X define START DATE 1Mar92 0:00 UTC first confirmation received
+X define MAX COL 79 max column a line should hit
+X define MAX BUILD SIZE 256 max how to build size
+X define MAX PROGRAM SIZE 3217 max program source size
+X define MAX PROGRAM SIZE2 1536 max program source size not counting
+X whitespace and not followed by
+X whitespace or EOF
+X define MAX TITLE LEN 12 max chars in the title
+X define MAX ENTRY LEN 1 max length in the entry input line
+X define MAX ENTRY 8 max number of entries per person per year
+X define MAX FILE LEN 1024 max filename length for a info file
+X where to send entries
+X define ENTRY ADDR1 . apple,pyramid,sun,uunet hoptoad obfuscate
+X define ENTRY ADDR2
+X uuencode process assumes ASCII
+X define UUENCODE c encode str int c 0xff
+X define UUENCODE LEN 45 max uuencode chunk size
+X define UUINFO MODE 0444 mode of an info file's uuencode file
+X define UUBUILD MODE 0444 mode of the build file's uuencode file
+X define UUBUILD NAME build name for the build file's uuencode file
+X define UUPROG MODE 0444 mode of the program's uuencode file
+X define UUPROG NAME prog.c name for the program's uuencode file
+X encode str char val is the uuencoded character of val
+Xchar encode str 256 1 $% ' , . 0123456789: ABCDEFGHIJKLMNOPQRSTUVWXYZ $% ' , . 0123456789: ABCDEFGHIJKLMNOPQRSTUVWXYZ $% ' , . 0123456789: ABCDEFGHIJKLMNOPQRSTUVWXYZ $% ' , . 0123456789: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+X global declarations
+Xchar program our name
+Xlong start time the startup time
+X forward declarations
+Xvoid parse args
+Xvoid usage
+XFILE open remark
+XFILE open build
+XFILE open program
+XFILE open output
+Xvoid output entry
+Xvoid output remark
+Xvoid output author
+Xvoid output info
+Xvoid output build
+Xvoid output program
+Xvoid output end
+Xint get line
+Xvoid output till dot
+Xint col len
+Xvoid check io
+Xvoid uuencode
+Xmain argc, argv
+X int argc arg count
+X char argv the args
+X FILE remark NULL open remarks stream
+X FILE build NULL open build file stream
+X FILE prog NULL open program stream
+X FILE output NULL open output stream
+X char rname NULL file with remarks about the entry
+X char bname NULL file containing how prog.c should be built
+X char pname NULL the obfuscated program source file
+X char oname NULL ioccc entry output file
+X struct tm tm startup time structure
+X check on the year
+X start time time long 0
+X tm gmtime start time
+X if tm tm year RULE YEAR 1900
+X fprintf stderr,
+X %s: WARNING: this program applies to %d, which may differ from %d n n ,
+X argv 0 , RULE YEAR, 1900 tm tm year
+X parse the command line args
+X parse args argc, argv, rname, bname, pname, oname
+X open check the input and output files
+X We open and truncate the output file first, in case it is the same
+X as one of the input files.
+X output open output oname
+X remark open remark rname
+X build open build bname
+X prog open program pname
+X if output NULL remark NULL build NULL prog NULL
+X exit 1
+X output each section
+X output entry output, oname
+X output remark output, oname, remark, rname
+X output author output, oname
+X output info output, oname
+X output build output, oname, build, bname
+X output program output, oname, prog, pname
+X output end output, oname
+X flush the output
+X if fflush output EOF
+X fprintf stderr, %s: flush error in %s: , program, oname
+X perror
+X exit 2
+X final words
+X printf nYour entry can be found in %s. You should check this file n ,
+X oname
+X printf correct any problems and verify that the uudecode utility will n
+X printf correctly decode your build file and program. n n
+X printf This program has been provided as a guide for submitters. In n
+X printf cases where it conflicts with the rules, the rules shall apply. n
+X printf It is your responsibility to ensure that your entry conforms to n
+X printf the current rules. n n
+X printf Email your entries to: n
+X printf t%s n , ENTRY ADDR1
+X printf t%s n n , ENTRY ADDR2
+X printf Please use the following subject when you Email your entry: n
+X printf tioccc entry n n
+X all done
+X exit 0
+X parse args parse the command line args
+X Given the command line args, this function parses them and sets the
+X required name flags. This function will return only if the command
+X line syntax is correct.
+Xvoid
+Xparse args argc, argv, rname, bname, pname, oname
+X int argc arg count
+X char argv the args
+X char rname file with remarks about the entry
+X char bname file containing how prog.c should be built
+X char pname the obfuscated program source file
+X char oname ioccc entry output file
+X char optarg flag option operand
+X int flagname the name of the flag
+X int i
+X Not everyone has getopt, so we must parse args by hand.
+X program argv 0
+X for i 1 i argc i
+X determine the flagname
+X if argv i 0 ' '
+X usage 1
+X NOTREACHED
+X flagname int argv i 1
+X determine the flag's operand
+X if flagname ' 0' argv i 2 ' 0'
+X optarg argv i 2
+X else
+X if i 1 argc
+X usage 2
+X NOTREACHED
+X else
+X optarg argv i
+X save the flag's operand in the correct global variable
+X switch flagname
+X case 'r':
+X rname optarg
+X break
+X case 'b':
+X bname optarg
+X break
+X case 'p':
+X pname optarg
+X break
+X case 'o':
+X oname optarg
+X break
+X default:
+X usage 3
+X NOTREACHED
+X verify that we have all of the required flags
+X if rname NULL bname NULL pname NULL oname NULL
+X usage 4
+X NOTREACHED
+X return
+X usage print a usage message and exit
+X This function does not return.
+Xvoid
+Xusage exitval
+X int exitval exit with this value
+X fprintf stderr,
+X usage: %s r remarks b build p prog.c o ioccc.entry n n , program
+X fprintf stderr, t r remarks tfile with remarks about the entry n
+X fprintf stderr, t b build tfile containing how prog.c should be built n
+X fprintf stderr, t p prog.c tthe obfuscated program source file n
+X fprintf stderr, t o ioccc.entry tioccc entry output file n
+X exit exitval
+X open remark open check the remark file
+X The remark file should be indented by 4 spaces, and should not extend
+X beyond column MAX COL. These are not requirements, so we only warn.
+X This function returns NULL on I O or format error.
+XFILE
+Xopen remark filename
+X char filename
+X FILE stream the opened file stream
+X char buf BUFSIZ 1 input buffer
+X int toolong 0 number of lines that are too long
+X int non indent 0 number of lines not indented by 4 spaces
+X open the remark input file
+X stream fopen filename, r
+X if stream NULL
+X fprintf stderr, %s: cannot open remark file: %s: ,
+X program, filename
+X perror
+X return NULL
+X look at each line
+X while fgets buf, BUFSIZ, stream NULL
+X count lines that do not start with 4 spaces
+X if buf 0 ' n' strncmp buf, , 4 0
+X non indent
+X count long lines
+X if col len buf MAX COL
+X found a line that is too long
+X toolong
+X watch for I O errors
+X check io stream, filename, EOF OK
+X note long lines if needed
+X if toolong 0
+X fprintf stderr,
+X %s: WARNING: %d line s from %s extend beyond the 80th column n ,
+X program, toolong, filename
+X fprintf stderr,
+X %s: This is ok, but it would be nice to avoid n n ,
+X program
+X note non indented lines, if needed
+X if non indent 0
+X fprintf stderr,
+X %s: WARNING: %d line s from %s are not indented by 4 spaces n ,
+X program, non indent, filename
+X fprintf stderr,
+X %s: This is ok, but it would be nice to avoid n n ,
+X program
+X return the open file
+X rewind stream
+X return stream
+X open build open check the build file
+X The how to build file must not be longer than MAX BUILD SIZE bytes.
+X This function returns NULL on I O or size error.
+XFILE
+Xopen build filename
+X char filename
+X FILE stream the opened file stream
+X struct stat statbuf the status of the open file
+X open the how to build input file
+X stream fopen filename, r
+X if stream NULL
+X fprintf stderr, %s: cannot open how to build file: %s: ,
+X program, filename
+X perror
+X return NULL
+X determine the size of the file
+X if fstat fileno stream , statbuf 0
+X fprintf stderr, %s: cannot stat how to build file: %s: ,
+X program, filename
+X perror
+X return NULL
+X if statbuf.st size MAX BUILD SIZE
+X fprintf stderr,
+X %s: FATAL: the how to build file: %s, is %d bytes long n ,
+X program, filename, statbuf.st size
+X fprintf stderr,
+X %s: it may not be longer than %d bytes n ,
+X program, MAX BUILD SIZE
+X return NULL
+X return the open file
+X return stream
+X open program open check the program source file
+X The program source file must be 3217 bytes. The number of
+X non whitespace and chars not followed by whitespace must
+X be 1536 bytes.
+X This function returns NULL on I O or size error.
+XFILE
+Xopen program filename
+X char filename
+X FILE stream the opened file stream
+X struct stat statbuf the status of the open file
+X int count special count size
+X int c the character read
+X open the program source input file
+X stream fopen filename, r
+X if stream NULL
+X fprintf stderr, %s: cannot open program source file: %s: ,
+X program, filename
+X perror
+X exit 7
+X determine the size of the file
+X if fstat fileno stream , statbuf 0
+X fprintf stderr, %s: cannot stat program source file: %s: ,
+X program, filename
+X perror
+X return NULL
+X if statbuf.st size MAX PROGRAM SIZE
+X fprintf stderr,
+X %s: FATAL: the program source file: %s, is %d bytes long n ,
+X program, filename, statbuf.st size
+X fprintf stderr,
+X %s: it may not be longer than %d bytes n ,
+X program, MAX PROGRAM SIZE
+X return NULL
+X count the non whitespace, non followed by whitespace chars
+X count 0
+X c 0
+X while c fgetc stream EOF
+X look at non whitespace
+X if isascii c isspace c
+X switch c
+X case ' ': count if not followed by EOF or whitespace
+X case ' ':
+X case ' ':
+X peek at next char
+X c fgetc stream
+X if c EOF isascii c isspace c
+X not followed by whitespace or EOF, count it
+X ungetc c, stream
+X count
+X break
+X default:
+X count
+X break
+X watch for I O errors
+X check io stream, filename, EOF OK
+X look at the special size
+X if count MAX PROGRAM SIZE2
+X fprintf stderr,
+X %s: FATAL: the number of bytes that are non whitespace, and n ,
+X program
+X fprintf stderr,
+X %s: that are not ' ', ' ', ' ' followed by whitespace n ,
+X program
+X fprintf stderr,
+X %s: or EOF must be %d bytes n ,
+X program, MAX PROGRAM SIZE2
+X fprintf stderr,
+X %s: in %s, %d bytes were found n ,
+X program, filename, count
+X return NULL
+X return the open file
+X rewind stream
+X return stream
+X open output open check the entry output file
+X This function returns NULL on open error.
+XFILE
+Xopen output filename
+X char filename
+X FILE stream the opened file stream
+X open the ioccc entry output file
+X stream fopen filename, w
+X if stream NULL
+X fprintf stderr, %s: cannot open ioccc entry file for output: %s: ,
+X program, filename
+X perror
+X exit 8
+X return the open file
+X return stream
+X output entry output the entry section
+X Read the needed information form stdin, and write the entry section.
+Xvoid
+Xoutput entry output, oname
+X FILE output entry's output file stream
+X char oname name of the output file
+X char title MAX TITLE LEN 1 1 the entry's title
+X char buf MAX COL 1 1 I O buffer
+X int entry 0 entry number
+X int ret fields processed by fscanf
+X int ok line 0 0 the line is not ok
+X char skip input to skip
+X FILE date pipe pipe to a date command
+X time t epoch sec seconds since the epoch
+X char p
+X write the start of the section
+X fprintf output, entry n
+X check io output, oname, EOF NOT OK
+X write the rule year
+X fprintf output, rule: t%d n , RULE YEAR
+X check io output, oname, EOF NOT OK
+X determine if this is a fix
+X printf Is this a fix, update or resubmittion to a
+X printf previous entry enter y or n
+X while get line buf, 1 1, 0 0 buf 0 'y' buf 0 'n'
+X printf nplease answer y or n:
+X if buf 0 'y'
+X fprintf output, fix: ty n
+X check io output, oname, EOF NOT OK
+X printf nBe sure that the title and entry number that you give n
+X printf are the same of as the entry you are replacing n
+X else
+X fprintf output, fix: tn n
+X check io output, oname, EOF NOT OK
+X write the title
+X printf nYour title must match expression be a a zA Z0 9 character n
+X printf followed by 0 to %d more a zA Z0 9 characters. n n ,
+X MAX TITLE LEN 1
+X printf It is suggested, but not required, that the title should n
+X printf incorporate your username in the n
+X printf case of multiple authors, consider using parts of the usernames n
+X printf of the authors. n n
+X printf enter your title:
+X do
+X prompt and read a line
+X if ok line get line title, MAX TITLE LEN 1, MAX COL 9 0
+X printf ntitle is too long, please re enter:
+X continue
+X verify the pattern, not everyone has regexp, so do it by hand
+X if isascii int title 0
+X isalnum int title 0 title 0 ' ' title 0 ' '
+X printf ninvalid first character in the title n n
+X printf enter your title:
+X ok line 0
+X else
+X for p title 1 p ' 0' p ' n' p
+X if isascii int p
+X isalnum int p
+X p ' ' p ' ' p ' ' p ' '
+X printf ninvalid character in the title n n
+X printf enter your title:
+X ok line 0
+X while ok line 0
+X fprintf output, title: t%s , title
+X check io output, oname, EOF NOT OK
+X write the entry number
+X printf nEach person may submit up to %d entries per year. n n ,
+X MAX ENTRY
+X printf enter an entry number from 0 to %d inclusive: , MAX ENTRY 1
+X do
+X get a valid input line
+X fflush stdout
+X ret fscanf stdin, %d n , entry
+X check io stdin, stdin , EOF NOT OK
+X skip over input until newline is found
+X do
+X skip fgetc stdin
+X check io stdin, stdin , EOF NOT OK
+X if skip ' n'
+X bad text in input, invalidate entry number
+X entry 1
+X while skip ' n'
+X check if we have a number, and if it is in range
+X if ret 1 entry 0 entry MAX ENTRY 1
+X printf
+X nThe entry number must be between 0 and %d inclusive n n ,
+X MAX ENTRY 1
+X printf enter the entry number:
+X while ret 1 entry 0 entry MAX ENTRY 1
+X fprintf output, entry: t%d n , entry
+X check io output, oname, EOF NOT OK
+X write the submission date
+X returns a newline
+X epoch sec time NULL
+X fprintf output, date: t%s , asctime gmtime epoch sec
+X check io output, oname, EOF NOT OK
+X write the OS machine host information
+X printf
+X nEnter the machine s and OS s under which your entry was tested. n
+X output till dot output, oname, host:
+X output remark output the remark section
+X Read the needed information form stdin, and write the entry section.
+Xvoid
+Xoutput remark output, oname, remark, rname
+X FILE output entry's output file stream
+X char oname name of the output file
+X FILE remark stream to the file containing remark text
+X char rname name of the remark file
+X char buf BUFSIZ 1 input output buffer
+X write the start of the section
+X fprintf output, remark n
+X check io output, oname, EOF NOT OK
+X copy the remark file to the section
+X while fgets buf, BUFSIZ, remark NULL
+X fputs buf, output
+X check io output, oname, EOF NOT OK
+X check io remark, rname, EOF OK
+X be sure that the remark section ends with a newline
+X if buf strlen buf 1 ' n'
+X fputc ' n', output
+X check io output, oname, EOF NOT OK
+X output author output the author section
+X Read the needed information from stdin, and write the author section.
+X If multiple authors exist, multiple author sections will be written.
+Xvoid
+Xoutput author output, oname
+X FILE output entry's output file stream
+X char oname name of the output file
+X char buf MAX COL 1 1 I O buffer
+X int more auths TRUE more authors to note
+X int auth cnt 0 number of authors processed
+X prompt the user for the author section
+X printf nEnter information about each author. If your entry is after n
+X printf %s and before the contest deadline, the judges n , START DATE
+X printf will attempt to Email back a confirmation to the first author n
+X place author information for each author in an individual section
+X do
+X write the start of the section
+X fprintf output, author n
+X check io output, oname, EOF NOT OK
+X write the author
+X printf nAuthor %d name: , auth cnt
+X while get line buf, MAX COL 1, MAX COL 9 0
+X printf nname too long, please re enter:
+X fprintf output, name: t%s , buf
+X check io output, oname, EOF NOT OK
+X write the organization
+X printf nEnter the School Company Organization of author %d n ,
+X auth cnt
+X printf nAuthor %d org: , auth cnt
+X while get line buf, MAX COL 1, MAX COL 9 0
+X printf nline too long, please re enter:
+X fprintf output, org: t%s , buf
+X check io output, oname, EOF NOT OK
+X write the address
+X printf
+X nEnter the postal address for author %d. Be sure to include n ,
+X auth cnt
+X printf your country and do not include your name. n
+X output till dot output, oname, addr:
+X write the Email address
+X printf
+X nEnter the Email address for author %d. Use an address from n ,
+X auth cnt
+X printf
+X a registered domain or well known site. If you give several n
+X printf forms, list them one per line. n
+X output till dot output, oname, email:
+X write the anonymous status
+X printf nShould author %d remain anonymous enter y or n ,
+X auth cnt
+X while get line buf, 1 1, 0 0 buf 0 'y' buf 0 'n'
+X printf nplease answer y or n:
+X fprintf output, anon: t%s , buf
+X check io output, oname, EOF NOT OK
+X determine if there is another author
+X printf nIs there another author enter y or n
+X while get line buf, 1 1, 0 0 buf 0 'y' buf 0 'n'
+X printf nplease answer y or n:
+X if buf 0 'y'
+X more auths TRUE
+X else
+X more auths FALSE
+X while more auths TRUE
+X return
+X output info output the info section s
+X Read the needed information from stdin, and write the info section.
+X If multiple info files exist, multiple info sections will be written.
+Xvoid
+Xoutput info output, oname
+X FILE output entry's output file stream
+X char oname name of the output file
+X char infoname MAX FILE LEN 1 filename buffer
+X char yorn 1 1 y or n answer
+X char uuname name to uuencode as
+X FILE infile info file stream
+X prompt the user for info information
+X printf nInfo files should be used only to supplement your entry. n
+X printf For example, info files may provide sample input or detailed n
+X printf information about your entry. Because they are supplemental, n
+X printf the entry should not require them to exist. n n
+X while there is another info file to save, uuencode it
+X printf Do you have a info file to include enter y or n
+X while get line yorn, 1 1, 0 0 yorn 0 'y' yorn 0 'n'
+X printf nplease answer y or n:
+X while yorn 0 'y'
+X read the filename
+X printf nEnter the info filename:
+X while get line infoname, MAX FILE LEN 1, 0 0
+X printf nInfo filename too long, please re enter:
+X compute the basename of the info filename
+X remove the trailing newline
+X uuname infoname strlen infoname 1
+X uuname ' 0'
+X avoid rindex shrrchr compat issues, do it by hand
+X for uuname uuname infoname uuname
+X if uuname ' '
+X uuname
+X break
+X attempt to open the info file
+X infile fopen infoname, r
+X if infile NULL
+X fprintf stderr, n%s: cannot open info file: %s: ,
+X program, infoname
+X perror
+X continue
+X write the start of the section
+X fprintf output, info n
+X check io output, oname, EOF NOT OK
+X uuencode the info file
+X uuencode output, oname, infile, infoname, UUINFO MODE, uuname
+X printf nDo you have another info file to include enter y or n
+X while get line yorn, 1 1, 0 0 yorn 0 'y' yorn 0 'n'
+X printf nplease answer y or n:
+X return
+X output build output the build section
+X Read the needed information from stdin, and write the build section.
+Xvoid
+Xoutput build output, oname, build, bname
+X FILE output entry's output file stream
+X char oname name of the output file
+X FILE build open build file stream
+X char bname name of the build file
+X write the start of the section
+X fprintf output, build n
+X check io output, oname, EOF NOT OK
+X uuencode the program file
+X uuencode output, oname, build, bname, UUBUILD MODE, UUBUILD NAME
+X return
+X output program output the program section
+X Read the needed information form stdin, and write the program section.
+Xvoid
+Xoutput program output, oname, prog, pname
+X FILE output entry's output file stream
+X char oname name of the output file
+X FILE prog open program stream
+X char pname name of program file
+X write the start of the section
+X fprintf output, program n
+X check io output, oname, EOF NOT OK
+X uuencode the program file
+X uuencode output, oname, prog, pname, UUPROG MODE, UUPROG NAME
+X return
+X output end output the end section
+X Read the needed information form stdin, and write the 'end section'.
+Xvoid
+Xoutput end output, oname
+X FILE output entry's output file stream
+X char oname name of the output file
+X write the final section terminator
+X fprintf output, end n
+X check io output, oname, EOF NOT OK
+X return
+X get line get an answer from stdin
+X This function will flush stdout, in case a prompt is pending, and
+X read in the answer.
+X This function returns 0 if the line is too long, of the length of the
+X line including the newline of the line was ok. This function does
+X not return if ERROR or EOF.
+Xint
+Xget line buf, siz, maxcol
+X char buf input buffer
+X int siz length of input, including the newline
+X int maxcol max col allowed, 0 disable check
+X int length the length of the input line
+X flush terminal output
+X fflush stdout
+X read the line
+X if fgets buf, siz 1, stdin NULL
+X report the problem
+X check io stdin, stdin , EOF NOT OK
+X look for the newline
+X length strlen buf
+X if buf length 1 ' n'
+X int eatchar the char being eaten
+X no newline found, line must be too long, eat the rest of the line
+X do
+X eatchar fgetc stdin
+X while eatchar EOF eatchar ' n'
+X check io stdin, stdin , EOF NOT OK
+X report the situation
+X return 0
+X watch for long lines, if needed
+X if maxcol 0 length maxcol col len buf maxcol
+X report the situation
+X return 0
+X return length
+X return length
+X output till dot output a set of lines until '.' by itself is read
+X This routine will read a set of lines until but not including
+X a single line with '.' is read. The format of the output is:
+X leader: tfirst line
+X tnext line
+X tnext line
+X .
+X This routine will not return if I O error or EOF.
+Xvoid
+Xoutput till dot output, oname, leader
+X FILE output entry's output file stream
+X char oname name of the output file
+X char leader the lead text for the first line
+X char buf BUFSIZ 1 input buffer
+X int count lines read
+X int done FALSE TRUE finished reading input
+X instruct the user on how to input
+X printf nTo end input, enter a line with a single period. n
+X read lines until '.' or EOF
+X count 0
+X while done
+X issue the prompt
+X printf %s t , count 0 : leader
+X fflush stdout
+X get the line
+X if get line buf, BUFSIZ, MAX COL 9 0
+X printf nline too long, please re enter: n t
+X continue
+X note if '.' was read
+X if strcmp buf, . n 0
+X done TRUE
+X write line if we read something
+X if done
+X fprintf output, %s t%s , count 0 : leader, buf
+X check io output, oname, EOF NOT OK
+X if no lines read, at least output something
+X if count 0
+X fprintf output, %s t. n , leader
+X check io output, oname, EOF NOT OK
+X return
+X col len determine the highest that a string would reach
+X Given a string, this routine returns that a string would reach
+X if the string were printed at column 1. Tab stops are assumed
+X to start at 9, 17, 25, 33, .
+Xint
+Xcol len string
+X char string the string to examine
+X int col current column
+X char p current char
+X scan the string
+X for col 0, p string p ' 0' p ' n' p
+X note the column shift
+X col p ' t' 1 col 8 8 8 : col 1
+X if p ' n'
+X col
+X return the highest column
+X return col
+X check io check for EOF or I O error on a stream
+X Does not return if EOF or I O error.
+Xvoid
+Xcheck io stream, name, eof ok
+X FILE stream the stream to check
+X char name the name of this stream
+X int eof ok EOF OK or EOF NOT OK
+X test for I O error
+X if ferror stream
+X fprintf stderr, %s: error on %s: , program, name
+X perror
+X exit 1
+X test for EOF
+X else if eof ok EOF NOT OK feof stream
+X fprintf stderr, %s: EOF on %s n , program, name
+X exit 1
+X return
+X uuencode uuencode a file
+X Perform the uuencoding process identical to the process performed
+X by the uuencode 1 utility.
+X This routine implements the algorithm described in the uuencode 5
+X 4.3BSD Reno man page.
+Xvoid
+Xuuencode output, oname, infile, iname, umode, uname
+X FILE output output file stream
+X char oname output filename
+X FILE infile input file stream
+X char iname input filename
+X int umode the mode to put on the uuencode file
+X char uname name to put on the uuencode file
+X char buf UUENCODE LEN 1 the uuencode buffer
+X int read len actual number of chars read
+X int val 6 bit chunk from buf
+X char filler ' 0' filler uuencode pad text
+X char p
+X output the initial uuencode header
+X fprintf output, begin %o %s n , umode, uname
+X check io output, oname, EOF NOT OK
+X clear out the input buffer
+X for p buf p buf sizeof buf sizeof buf 0 p
+X p ' 0'
+X We will process UUENCODE LEN chars at a time, forming
+X a single output line each time.
+X while read len fread buf,sizeof buf 0 ,UUENCODE LEN,infile 0
+X the first character is the length character
+X fputc UUENCODE read len , output
+X check io output, oname, EOF NOT OK
+X We will convert 24 bits at a time. Thus we will convert
+X 3 sets of 8 bits into 4 sets of uuencoded 6 bits.
+X for p buf read len 0 read len 3, p 3
+X bits 0 to 5
+X val p 0 2 0x3f
+X fputc UUENCODE val , output
+X check io output, oname, EOF NOT OK
+X bits 6 to 11
+X val p 0 4 0x30 p 1 4 0x0f
+X fputc UUENCODE val , output
+X check io output, oname, EOF NOT OK
+X bits 12 to 17
+X val p 1 2 0x3c p 2 6 0x03
+X fputc UUENCODE val , output
+X check io output, oname, EOF NOT OK
+X bits 18 to 23
+X val p 2 0x3f
+X fputc UUENCODE val , output
+X check io output, oname, EOF NOT OK
+X end of UUENCODE LEN line
+X fputc ' n', output
+X check io output, oname, EOF NOT OK
+X clear out the input buffer don't depend on bzero or memset
+X for p buf p buf sizeof buf sizeof buf 0 p
+X p ' 0'
+X check the last read on the input file
+X check io infile, iname, EOF OK
+X write end of uuencode file
+X fprintf output, %c nend n , UUENCODE filler
+X check io output, oname, EOF NOT OK
+SHAR EOF
+chmod 0444 mkentry.c
+echo restore of mkentry.c failed
+set wc c mkentry.c Wc c $1
+if test $Wc c 33961 then
+echo original size 33961, current size $Wc c
+obfuscate.info
+echo x extracting obfuscate.info Text
+sed 's X ' 'SHAR EOF' obfuscate.info
+X1993 Obfuscated contest information
+XCopyright c Landon Curt Noll Larry Bassel, 1993.
+XAll Rights Reserved. Permission for personal, education or non profit use is
+Xgranted provided this this copyright and notice are included in its entirety
+Xand remains unaltered. All other uses must receive prior permission in writing
+Xfrom both Landon Curt Noll and Larry Bassel.
+XThe International Obfuscated C Code Contest IOCCC , in the sprit of
+Xco operation, is willing mention other programming contents, as space
+Xpermits.
+XHow to have your contest included in this file:
+X If you wish the IOCCC judges to include your contest in this file,
+X send a request to:
+X We request that contest descriptions be limited to 50 lines and to
+X not exceed 2500 bytes. We typically request that your contest
+X include a current description of the IOCCC.
+X In order to be included in this file for given year, we must
+X receive a current description no EARLIER than Jan 1 00:00:00 UTC and
+X no LATER than Feb 15 00:00:00 UTC. Agreement to publish your
+X contest must also be obtained prior to Feb 15. Annual contests
+X that fail to submit a new entry will be dropped from this file.
+XOfficial Disclaimer: pardon the officialese
+X The contents noted below, other than the IOCCC, are not affiliated
+X with the IOCCC, nor are they endorsed by the IOCCC. We reserve the
+X right to refuse to print information about a given contest.
+X The information below was provided by the particular contest
+X organizer s and printed by permission. Please contact the
+X contest organizer s directly regarding their contents.
+XWith that official notice given, we present for your ENJOYMENT, the following
+Xinformation about contents:
+X 10th International Obfuscated C Contest
+X The original obfuscated contest
+X Obfuscate: tr.v. cated, cating, cates. 1. a. To render obscure.
+X b. To darken. 2. To confuse: Their emotions obfuscated
+X their judgment. LLat. obfuscare, to darken : ob intensive
+X Lat. fuscare, to darken fuscus, dark. obfuscation n.
+X obfuscatory adj.
+X GOALS OF THE CONTEST:
+X To write the most Obscure Obfuscated C program under the rules below.
+X To show the importance of programming style, in an ironic way.
+X To stress C compilers with unusual code.
+X To illustrate some of the subtleties of the C language.
+X To provide a safe forum for poor C code. :
+X The IOCCC is the grandfather of USENET programming contests. Since
+X 1984, this contest demonstrated that a program that mearly works
+X correctly is not sufficient. The IOCCC has also done much to add
+X the arcane word 'obfuscated' back into the English language.
+X see The New Hacker's Dictionary by Eric Raymond
+X You are strongly encouraged to read the new contest rules before
+X sending any entries. The rules, and sometimes the contest Email
+X address itself, change over time. A valid entry one year may
+X be rejected in a later year due to changes in the rules. The typical
+X start date for contests is in early March. Contest rules are normally not
+X finalized and posted until the beginning of the contest. The typical
+X closing date for contests are in early May.
+X The contest rules are posted to comp.unix.wizards, comp.lang.c,
+X misc.misc, alt.sources and comp.sources.d. If you do not have access
+X to these groups, or if you missed the early March posting, you may
+X request a copy from the judges, via Email, at
+X or . sun,uunet,utzoo,pyramid hoptoad judges
+X Previous contest winners are available via anonymous ftp from
+X ftp.uu.net under the directory pub ioccc.
+X 0th International Obfuscated Perl Contest
+X By: Landon Noll Larry Wall
+X This content is being planned. Someday when Landon Larry are not too
+X busy, they will actually get around to posting the first set of rules
+X Landon says: Yes, I know that I said we would have a contest in 1993,
+X but other existing projects got in the way. Hopefully
+X something will be developed after Nov 1993.
+X 2nd International obFUsCaTeD POsTsCripT Contest
+X Jonathan Monsarrat
+X Alena Lacova
+X A contest of programming skills and knowledge, exclusively for the
+X PostScript programming language. Its purpose:
+X To spread knowledge of PostScript and its details.
+X To applaud those with the best tricks.
+X To prove that humans can beat those damnable machine generators at
+X their own game by writing the most obscure and mysterious PostScript
+X programs ever.
+X Winners will receive the fame and attention that goes with having their
+X program entry posted as a winner to programmers world wide.
+X The 1993 contest rules and results are available by ftp as
+X wilma.cs.brown.edu:pub postscript obfuscated .shar'', or individually
+X in the obfuscated directory. The judges will post the 1994 rules
+X in November to comp.lang.postscript on Usenet, and other places.
+X Send questions to
+X Categories include: Best Obfuscated PostScript, Best Artwork,
+X Most Compact, Best Interactive Program, Most Useful, and
+X anything so unusual and creative that it deserves an award.
+X The judges will choose the winners of each category.
+X Alena Lacova is a system administrator at NIKHEF Institute for High
+X Energy and Nuclear Physics in the Netherlands. She is the author of
+X The PostScript Chaos Programs, which draw Julia sets, Mandelbrot sets
+X and other kinds of fractal functions.
+X Jonathan Monsarrat is a graduate student from MIT and Brown University
+X in the U.S.A. He is the FAQ maintainer for the Usenet newsgroup
+X comp.lang.postscript and the author of The PostScript Zone and LameTeX.
+X .
+SHAR EOF
+chmod 0444 obfuscate.info
+echo restore of obfuscate.info failed
+set wc c obfuscate.info Wc c $1
+if test $Wc c 6257 then
+echo original size 6257, current size $Wc c
+exit 0
+Sunnyvale residents: Vote Landon Noll for Sunnyvale City Council seat 1.

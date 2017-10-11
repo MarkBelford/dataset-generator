@@ -1,0 +1,13 @@
+deleted.
+In plain Motify using a dialog 'in line' like this simply isn't done. You need
+to set callbacks from the buttons widgets in your dialog and let the callback routines
+do the work. In the callbacks you can then carry on the flow of logic.
+XView from Sun actually supports this very neatly with a 'Notify' box, which can
+return a status in line, it does actualy ease coding but goes against the event
+driven style of an application.
+Summary: Redesign required.
+Delta hedging a long option position also
+generates a short gamma exposure and any return
+generated from delta hedging options can be thought
+of as compensation for assuming gamma risk
+Radioactive investment management. whew

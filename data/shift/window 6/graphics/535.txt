@@ -1,0 +1,7 @@
+I would like a reference to an algorithm that can detect whether
+one closed curve bounded by some number of bezier curves lies completely
+within another closed curve bounded by bezier curves.
+Thanks.
+Sean T. Lamont Ask me about the WSI Fonts
+Professional collection for NeXT
+Abstract Software

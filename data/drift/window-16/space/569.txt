@@ -1,0 +1,8 @@
+In article , Joseph Wetstein asked:
+Hello. I am looking for a program or algorithm that can be used
+to compute sunrise and sunset times.
+I would appreciate any advice.
+Joe Wetstein
+To compute this, and many other astronomical things, go and get x ephem written
+by Elwood C. Downey. It is e.g. on export.lcs.mit.edu
+Uwe Bonnes

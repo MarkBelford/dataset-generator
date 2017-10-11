@@ -1,0 +1,19 @@
+Hello world,
+I want to write my Xt application code like this:
+do some work
+now I need some user input
+XmCreateDialog
+wait for user input input
+if input OK
+more work
+else
+other work
+So more work and other work are not in callback functions but the
+application simply waits for the user to answer the question.
+How can I code this in my Xt Motif application
+Thanks very much in advance.
+Greetings, Huub.
+CWI, P.O. Box 4079 Huub Bakker
+1009 AB Amsterdam
+The Netherlands
+Tel. 31 20 5924080

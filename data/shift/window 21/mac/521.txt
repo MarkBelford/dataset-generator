@@ -1,0 +1,8 @@
+Jon Wtte writes .
+But the interesting comparision is how fast clock cycle chips
+you can get an Alpha is WAY slow at 66 MHz, but blazes at
+200 MHz.
+The only problem is going to be finding someone who can make a 200MHz
+computer system. Could be tough.
+Ray Fischer Convictions are more dangerous enemies of truth
+than lies. Friedrich Nietzsche

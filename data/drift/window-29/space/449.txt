@@ -1,0 +1,10 @@
+You'd need to launch HLVs to send up large amounts of stuff. Do you know
+of a private Titan pad
+You'd need to launch HLVs to send up large amounts of stuff if you assume
+no new launcher development. If you assume new launcher development, with
+lower costs as a specific objective, then you probably don't want to
+build something HLV sized anyway.
+Nobody who is interested in launching things cheaply will buy Titans. It
+doesn't take many Titan pricetags to pay for a laser launcher or a large
+gas gun or a development program for a Big Dumb Booster, all of which
+would have far better cost effectiveness.

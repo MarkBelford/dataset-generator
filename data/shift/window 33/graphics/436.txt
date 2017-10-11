@@ -1,0 +1,7 @@
+Does anyone have a radon transform in C that they could
+send me
+Any help accepted,
+For a lot of .au music: ftp sounds.sdsu.edu
+then cat file.au dev audio
+UB library catalog:telnet bison.acsu.buffalo.edu
+14261 When in doubt ask: xarchie, xgopher, or xwais.

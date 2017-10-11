@@ -1,0 +1,10 @@
+Contact Signaware Corp
+800 4583820
+800 6376564
+Original Memo
+BCC: Vincent Wall From: Imaging Club
+sci.image.processing
+Hi, All:
+Could someone tell me if there is a database of handwriting signature
+images available for evaluating signature verification systems.
+Thanks.

@@ -1,0 +1,9 @@
+From article , by :
+Can anyone tell me if and how they have printed Spanish characters I know WP 5.1 has this built in, but I do not recall ever seeing this option on WFW2. HELP
+Try using the extended character set Alt sequences . .
+look in Character Map in the Accessories group and see the alt sequence
+for the font you want
+Gregory R. Cook INTERNET:
+Department of Chemistry
+Michigan State University
+East Lansing, MI 48824 BITNET:

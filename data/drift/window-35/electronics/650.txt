@@ -1,0 +1,9 @@
+I'm looking for any and all information regarding packet radio
+implementation on the PC. Software, hardware, whatever.
+Please e mail any info to
+Thanks
+Try rec.radio.packet
+Michael A. de Kraker
+Georgia State University 404 651 2390
+BITNET : PACKET:
+To iterate is human, to recurse devine

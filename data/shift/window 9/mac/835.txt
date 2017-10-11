@@ -1,0 +1,9 @@
+In article Mark Perry,
+There seems to be a P
+PDS slot in the above printers. What is it
+It is a factory testing slot. The test rig connects to the connector and
+verifies proper board operation.
+Kevin
+S. Kevin Hester Disclaimer: Nothing I say has anything to do
+with Apple Computer. The red zone is for
+Portable Beer Brewer loading and unloading of passenger vehicles only.
